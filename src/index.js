@@ -19,6 +19,7 @@ function FoodTable({ calorieData, onFoodPillClick }) {
     <ul className="FoodList">
       {calorieData.slice(0, 10).map(({ name, calories, measure }) => (
         <FoodPill
+          key={name}
           name={name}
           calories={calories}
           measure={measure}
@@ -40,11 +41,7 @@ export default function App() {
 
   function SearchHandler() {
     // var userInput = event.target.value;
-    // console.log(userInput);
-    // var foodDesc = FoodObj[userInput];
-    // if (foodDesc === undefined) foodDesc = "We don't have that food item here!";
-    // setFoodItem(foodDesc);
-    var userInput = textInput.current.value;
+    var userInput = textInput.current.value.toLowerCase();
     var foodDesc = FoodObj[userInput];
     if (foodDesc === undefined) foodDesc = ":(";
     setFoodItem(foodDesc);
@@ -60,6 +57,7 @@ export default function App() {
         placeholder="Search for a food here..."
         ref={textInput}
       />
+
       <button onClick={SearchHandler}>Search</button>
       <h3>Result here</h3>
       <div
