@@ -1,4 +1,32 @@
 .App {
-  font-family: sans-serif;
-  text-align: center;
+  font-family: "Nunito", sans-serif;
+  /* text-align: center; */
+}
+body {
+  background-image: linear-gradient(to right, #cc66ff, #99ccff);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+h1 {
+  font-size: 40px;
+}
+input {
+  padding: 0.7em;
+  width: 40%;
+  /* border-radius: 25px; */
+  outline: none;
+}
+button {
+  padding: 0.6em 2em;
+  margin-left: 0.5em;
+  /* border-radius: 20px; */
+  outline: none;
+}
+.foodList {
+  /* padding-left: 10em; */
+  list-style: none;
+  text-align: left;
+}
+.foodPill {
+  padding: 0.4em;
 }

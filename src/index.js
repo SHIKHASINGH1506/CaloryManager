@@ -6,18 +6,19 @@ import ReactDOM from "react-dom";
 
 function FoodPill({ name, calories, measure, OnFoodPillClick }) {
   return (
-    <li className="FoodPill" onClick={() => OnFoodPillClick(calories)}>
+    <li className="foodPill" onClick={() => OnFoodPillClick(calories)}>
       <span>{name} </span>
-      <span>{calories} </span>
       <span>{measure} </span>
+      <br />
+      <span>{calories} </span>
     </li>
   );
 }
 
 function FoodTable({ calorieData, onFoodPillClick }) {
   return (
-    <ul className="FoodList">
-      {calorieData.slice(0, 10).map(({ name, calories, measure }) => (
+    <ul className="foodList">
+      {calorieData.slice(0, 7).map(({ name, calories, measure }) => (
         <FoodPill
           key={name}
           name={name}
@@ -51,7 +52,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Calory Manager</h1>
+      <h1 className="header">Calory Manager</h1>
       <input
         type="text"
         placeholder="Search for a food here..."
