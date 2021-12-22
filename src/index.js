@@ -36,11 +36,17 @@ export default function App() {
     measure: ""
   });
   const [calory, setCalory] = useState(0);
+  const textInput = React.createRef();
 
-  function SearchHandler(event) {
-    var userInput = event.target.value;
+  function SearchHandler() {
+    // var userInput = event.target.value;
+    // console.log(userInput);
+    // var foodDesc = FoodObj[userInput];
+    // if (foodDesc === undefined) foodDesc = "We don't have that food item here!";
+    // setFoodItem(foodDesc);
+    var userInput = textInput.current.value;
     var foodDesc = FoodObj[userInput];
-    if (foodDesc === undefined) foodDesc = "We don't have that food item here!";
+    if (foodDesc === undefined) foodDesc = ":(";
     setFoodItem(foodDesc);
   }
 
@@ -52,8 +58,9 @@ export default function App() {
       <input
         type="text"
         placeholder="Search for a food here..."
-        onChange={SearchHandler}
+        ref={textInput}
       />
+      <button onClick={SearchHandler}>Search</button>
       <h3>Result here</h3>
       <div
         className="FoodItem"
