@@ -1,6 +1,5 @@
 .App {
   font-family: "Nunito", sans-serif;
-  /* text-align: center; */
 }
 body {
   background-image: linear-gradient(to right, #cc66ff, #99ccff);
@@ -13,17 +12,14 @@ h1 {
 input {
   padding: 0.7em;
   width: 40%;
-  /* border-radius: 25px; */
   outline: none;
 }
 button {
   padding: 0.6em 2em;
   margin-left: 0.5em;
-  /* border-radius: 20px; */
   outline: none;
 }
 .foodList {
-  /* padding-left: 10em; */
   list-style: none;
   text-align: left;
 }
